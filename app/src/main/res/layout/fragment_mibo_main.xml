@@ -10,8 +10,9 @@
                 tools:showIn="@layout/activity_mibo_main">
 
     <TextView
+        android:id="@+id/tv_hello"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"/>
+        android:text="Hello Kotlin!"/>
 
 </RelativeLayout>
