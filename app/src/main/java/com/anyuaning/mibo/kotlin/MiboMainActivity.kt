@@ -9,15 +9,18 @@ import android.view.View
 import android.view.Menu
 import android.view.MenuItem
 
+import kotlinx.android.synthetic.main.activity_mibo_main.*;
+
+
 class MiboMainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mibo_main)
-        val toolbar = findViewById(R.id.toolbar) as Toolbar
+//        val toolbar = findViewById(R.id.toolbar) as Toolbar
         setSupportActionBar(toolbar)
 
-        val fab = findViewById(R.id.fab) as FloatingActionButton
+//        val fab = findViewById(R.id.fab) as FloatingActionButton
         fab.setOnClickListener { view -> Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show() }
     }
 
