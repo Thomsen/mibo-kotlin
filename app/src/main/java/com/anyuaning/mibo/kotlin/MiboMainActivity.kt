@@ -9,20 +9,36 @@ import android.view.View
 import android.view.Menu
 import android.view.MenuItem
 import com.anyuaning.mibo.R
+import com.google.firebase.analytics.FirebaseAnalytics
 
 import kotlinx.android.synthetic.main.activity_mibo_main.*;
 
 
 class MiboMainActivity : AppCompatActivity() {
 
+    lateinit var mFirebaseAnalytics:FirebaseAnalytics;  // diff lateinit and lazy
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mibo_main)
+
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this)
+
 //        val toolbar = findViewById(R.id.toolbar) as Toolbar
         setSupportActionBar(toolbar)
 
 //        val fab = findViewById(R.id.fab) as FloatingActionButton
-        fab.setOnClickListener { view -> Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show() }
+        fab.setOnClickListener {
+            view -> Snackbar.make(view, "Replace with your own action",
+                Snackbar.LENGTH_LONG).setAction("Action", null).show()
+
+            var bundle: Bundle = Bundle()
+            bundle.putString(FirebaseAnalytics.Param.ITEM_ID, view.id.toString())
+            bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, "action")
+            bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "snackbar")
+            mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle)
+
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

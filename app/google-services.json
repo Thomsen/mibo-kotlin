@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "1065829558489-acvjk5caoi23vsjmb2qcrn1kbr9r82ok.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.anyuaning.mibo",
+            "certificate_hash": "a80a36832e362ac371da638a1fb2b8247c2a8cfa"
+          }
+        },
+        {
           "client_id": "1065829558489-4datibko4f25s5p2f76o34b0uif79j8k.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1065829558489-4datibko4f25s5p2f76o34b0uif79j8k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2
