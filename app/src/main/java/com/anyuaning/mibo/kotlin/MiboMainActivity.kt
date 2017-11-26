@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar
 import android.view.View
 import android.view.Menu
 import android.view.MenuItem
+import com.anyuaning.mibo.R
 
 import kotlinx.android.synthetic.main.activity_mibo_main.*;
 
